@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/GaneshSrambikal/To_do-list/issues"
   },
-  "homepage": "https://github.com/GaneshSrambikal/To_do-list#readme"
+  "homepage": "https://github.com/GaneshSrambikal/To_do-list#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.3"
+  }
 }
