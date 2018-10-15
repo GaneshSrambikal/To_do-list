@@ -1,0 +1,19 @@
+{
+  "name": "to_do_list",
+  "version": "1.0.0",
+  "description": "to do list using mern stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GaneshSrambikal/To_do-list.git"
+  },
+  "author": "Ganesh Srambikal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GaneshSrambikal/To_do-list/issues"
+  },
+  "homepage": "https://github.com/GaneshSrambikal/To_do-list#readme"
+}
