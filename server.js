@@ -2,6 +2,8 @@ const express = require('express');//backend framwork
 const mongoose = require('mongoose');//orm to interact to mongodb
 const bodyParser = require('body-parser');//take request and response from the bo=ody
 
+//path to routes
+const lists = require('./routes/api/lists');
 
 const app = express();
 
@@ -16,6 +18,9 @@ mongoose
     .connect(db)
     .then(() => console.log('Mongodb Connected..'))
     .catch(err => consoloe.log(err));
+
+//use routes
+app.use('/api/lists', lists);
 
 const port = process.env.PORT || 5000;
 
