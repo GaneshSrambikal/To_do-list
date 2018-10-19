@@ -49,7 +49,8 @@ class ListModal extends Component {
                     color="dark"
                     style={{ marginBottom: '2rem' }}
                     onClick={this.toggle}
-                >Add List</Button>
+                >Add List
+                </Button>
 
                 <Modal
                     isOpen={this.state.modal}
@@ -65,9 +66,7 @@ class ListModal extends Component {
                                     name="name"
                                     id="list"
                                     placeholder="Add List"
-
                                     onChange={this.onChange}
-
                                 />
                                 <Button
                                     color="dark"
