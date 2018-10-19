@@ -5,3 +5,10 @@ export const getLists = () => {
         type: GET_LISTS
     };
 };
+
+export const deleteList = (id) => {
+    return {
+        type: DELETE_LIST,
+        payload: id
+    };
+};

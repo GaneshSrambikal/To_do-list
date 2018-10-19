@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import uuid from 'uuid';
 import { connect } from 'react-redux';
-import { getLists } from '../actions/ListAction';
+import { getLists, deleteList } from '../actions/ListAction';
 import PropTypes from 'prop-types';
 
 
@@ -12,24 +11,16 @@ class TodoList extends Component {
         this.props.getLists();
     };
 
+    onDeleteClick = (id) => {
+        this.props.deleteList(id);
+    }
+
     render() {
-        
+
         const { lists } = this.props.list;
         return (
             <Container>
-                <Button
-                    color="dark"
-                    style={{ marginBottom: '2rem' }}
-                    onClick={() => {
-                        const name = prompt('Enter List');
-                        if (name) {
-                            this.setState(state => ({
-                                lists: [...state.lists, { id: uuid(), name }]
-                            }));
-                        }
-                    }}
-                >Add List
-            </Button>
+
                 <ListGroup>
                     <TransitionGroup className="Todo-list">
                         {lists.map(({ id, name }) => (
@@ -39,12 +30,7 @@ class TodoList extends Component {
                                         className="remove-btn"
                                         color="danger"
                                         size="sm"
-
-                                        onClick={() => {
-                                            this.setState(state => ({
-                                                lists: state.lists.filter(list => list.id !== id)
-                                            }))
-                                        }}
+                                        onClick={this.onDeleteClick.bind(this, id)}
                                     >&times;
                                     </Button>
                                     {name}
@@ -67,4 +53,4 @@ const mapStateToProps = (state) => ({
     list: state.list
 });
 
-export default connect(mapStateToProps, { getLists })(TodoList);
+export default connect(mapStateToProps, { getLists, deleteList })(TodoList);

@@ -15,7 +15,12 @@ export default function (state = initialState, action) {
         case GET_LISTS:
             return {
                 ...state
-            }
+            };
+            case DELETE_LIST:
+            return{
+                ...state,
+                lists: state.lists.filter(list =>list.id !== action.payload)
+            };
         default:
             return state;
 
