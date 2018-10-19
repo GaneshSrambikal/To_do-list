@@ -6,9 +6,16 @@ export const getLists = () => {
     };
 };
 
-export const deleteList = (id) => {
+export const deleteList = id => {
     return {
         type: DELETE_LIST,
         payload: id
+    };
+};
+
+export const addList = list => {
+    return {
+        type: ADD_LIST,
+        payload: list
     };
 };

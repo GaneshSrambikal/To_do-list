@@ -16,10 +16,15 @@ export default function (state = initialState, action) {
             return {
                 ...state
             };
-            case DELETE_LIST:
-            return{
+        case DELETE_LIST:
+            return {
                 ...state,
-                lists: state.lists.filter(list =>list.id !== action.payload)
+                lists: state.lists.filter(list => list.id !== action.payload)
+            };
+        case ADD_LIST:
+            return {
+                ...state,
+                lists: [action.payload, ...state.lists]
             };
         default:
             return state;
