@@ -11,7 +11,6 @@ import {
 } from 'reactstrap';
 import { connect } from 'react-redux';
 import { addList } from '../actions/ListAction';
-import uuid from 'uuid';
 
 class ListModal extends Component {
     state = {
@@ -32,9 +31,8 @@ class ListModal extends Component {
         e.preventDefault();
 
         const newList = {
-            id: uuid(),
             name: this.state.name
-        }
+        };
         //add item via additem action
         this.props.addList(newList);
 
