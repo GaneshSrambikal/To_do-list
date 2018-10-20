@@ -1,7 +1,7 @@
 const express = require('express');//backend framwork
 const mongoose = require('mongoose');//orm to interact to mongodb
 const bodyParser = require('body-parser');//take request and response from the bo=ody
-
+const path = require('path');
 //path to routes
 const lists = require('./routes/api/lists');
 
@@ -21,6 +21,16 @@ mongoose
 
 //use routes
 app.use('/api/lists', lists);
+
+//serve static assets if in production'
+if (process.env.NODE_ENV === 'production') {
+    //set static folder
+    app.use(express.static('client/build'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    })
+}
 
 const port = process.env.PORT || 5000;
 
