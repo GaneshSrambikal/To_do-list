@@ -9,11 +9,9 @@
 following app helps to list your reminders .Its a full stack (MERN) 
 
 ## Some Screenshots of the app
+<a href="https://imgflip.com/gif/2klmph"><img src="https://i.imgflip.com/2klmph.gif" title="made at imgflip.com"/></a>
+<a href="https://imgflip.com/gif/2klmsq"><img src="https://i.imgflip.com/2klmsq.gif" title="made at imgflip.com"/></a>
 
-![Image](https://github.com/GaneshSrambikal/articledb/blob/master/snaps/snap01.png)
-![Image](https://github.com/GaneshSrambikal/articledb/blob/master/snaps/snap02.png)
-![Image](https://github.com/GaneshSrambikal/articledb/blob/master/snaps/snap03.png)
-  [link](https://github.com/GaneshSrambikal/articledb/tree/master/snaps/)
   
   Coded By 
   ### Ganesh Srambikal
