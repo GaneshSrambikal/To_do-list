@@ -13,5 +13,5 @@ following app helps to list your reminders .All the stacks used in this webApp i
 <a href="https://imgflip.com/gif/2klmsq"><img src="https://i.imgflip.com/2klmsq.gif" title="made at imgflip.com"/></a>
 
   
-  Coded By 
+  Coded & built By 
   ### Ganesh Srambikal
